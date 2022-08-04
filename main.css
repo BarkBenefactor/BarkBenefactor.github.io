@@ -11,7 +11,15 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-position: 100% 100%;
-#img {
+#Twitter {
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+#Founder {
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+#Opensea {
   z-index: 2;
   width: 100%;
   height: 100vh;
