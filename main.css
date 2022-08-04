@@ -10,4 +10,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-position: 100% 100%;
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
 }
