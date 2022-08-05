@@ -53,11 +53,11 @@
 
         if (lastTouchPosition !== undefined) {
             const deltaX = lastTouchPosition.clientX - e.touches[0].clientX;
-            bgPosition[0] -= deltaX;
+            bgPosition[0] += deltaX;
             bgPosition[0] = Math.max(Math.min(bgPosition[0], xLimits[1]), xLimits[0]);
 
             const deltaY = lastTouchPosition.clientY - e.touches[0].clientY;
-            bgPosition[1] -= deltaY;
+            bgPosition[1] += deltaY;
             bgPosition[1] = Math.max(Math.min(bgPosition[1], yLimits[1]), yLimits[0]);
 
             const percentage = window.matchMedia(`(max-width: ${breakPoint}px)`).matches ? 50 : 50;
