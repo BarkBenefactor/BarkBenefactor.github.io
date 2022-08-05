@@ -2,20 +2,19 @@ body{
   margin: 0;
   background-color: #1d1e22;
 }
-#parallax {
-  z-index: -1;
+img {
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  filter: drop-shadow(3px 3px 15px #3b3b3b);
+}
+#Parallax {
+  z-index: 1;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url('BG.png');
   background-repeat: no-repeat;
   background-position: center;
   background-position: 100% 100%;
-#Socials {
-  z-index: 2;
-  width: 100%;
-  height: 100vh;
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
 }
