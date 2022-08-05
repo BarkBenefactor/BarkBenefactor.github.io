@@ -20,4 +20,5 @@ if (window.mobileCheck = false) {
         e.preventDefault();
       }
       elem.addEventListener('touchstart', handleTouch, false);
+    }
 )();
