@@ -5,7 +5,7 @@
     // Magic happens here
     function parallax(e) {
         let _w = window.innerWidth/1;
-        let _h = window.innerHeight/1;
+        let _h = window.innerHeight/1
         let _mouseX = e.clientX;
         let _mouseY = e.clientY;
         let _depth1 = `${20 - (_mouseX - _w) * 0.01}% ${20 - (_mouseY - _h) * 0.01}%`;
