@@ -6,7 +6,7 @@
 
     // Add event listener
     document.addEventListener("mousemove", parallax);
-    const elem = document.querySelector("#parallax");
+    const elem = document.querySelector("#Parallax");
 
     // Magic happens here
     function parallax(e) {
@@ -74,3 +74,19 @@
     elem.addEventListener('touchend', handleTouchEnd, false);
 
 })();
+const modals = document.querySelectorAll("[data-modal]");
+
+modals.forEach(function (trigger) {
+  trigger.addEventListener("click", function (event) {
+    event.preventDefault();
+    const modal = document.getElementById(trigger.dataset.modal);
+    modal.classList.add("close");
+    const exits = modal.querySelectorAll(".modal-exit");r
+    exits.forEach(function (exit) {
+      exit.addEventListener("click", function (event) {
+        event.preventDefault();
+        modal.classList.remove("open");
+      });
+    });
+  });
+});
