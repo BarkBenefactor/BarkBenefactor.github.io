@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="main.css">
 </head>
 <center>
-<div id="myModal" centered   onclick=bgmp()  class="Modal ">
+<div id="myModal" centered  onclick=bgmp()  class="Modal ">
   <!-- Modal content -->
   <div center   class="Modal-content">
     <span  id="closeModal" class="Close"></span>
@@ -41,28 +41,17 @@
     <a href="https://twitter.com/BarkBenefactor/" id="twitter" target="_blank"><image class="Icon" src="twt.png"/></a>
     <a href="https://opensea.io/" id="brokensea" target="_blank"><image class="Icon" src="brokensea.png"/></a>
     <a href="javascript:void(0)" id="mute"><image class="Icon" src="mute.png"/></a>
-    <script>
-      var image =  document.getElementById("imageOne");
-
-      function changeColor()
-      {
-          if (image.getAttribute('src') == "mute.png")
-          {
-              image.src = "play.png";
-          }
-          else
-          {
-              image.src = "mute.png";
-          }
-      }
-  </script>
     </div>
   </center>
 </div>
 <script>
-  var bgm = document.getElementById("musica"); 
-  function bgmp() { 
-  bgm.play(); 
+  let started = false;
+var bgm = document.getElementById("musica"); 
+function bgmp() {
+  if (!started) {
+    bgm.play();
+  }  
+  started = true;
 }
   //is-hidden
   // Get the modal
