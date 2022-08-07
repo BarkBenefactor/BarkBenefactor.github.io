@@ -80,10 +80,10 @@
     paused = !paused;
     if (paused) {
       music.pause();
-      mute.firstChild.src = 'play.png';
+      mute.firstChild.src = 'mute.png';
     } else {        
       music.play();
-      mute.firstChild.src = 'mute.png';
+      mute.firstChild.src = 'play.png';
     }
   })
 
