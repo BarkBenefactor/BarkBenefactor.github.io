@@ -17,36 +17,51 @@
 <head>
 <!-- Meeeeta --> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <!-- Cee Ess Ess-->
 <link rel="stylesheet" href="main.css">
 </head>
 <center>
-<div id="myModal" centered onclick=bgmp()  class="Modal ">
+<div id="myModal" centered   onclick=bgmp()  class="Modal ">
   <!-- Modal content -->
-  <div center  class="Modal-content">
-    <span id="closeModal" class="Close"></span>
-   <img class="myBtn" src="EnterButton.png"> 
+  <div center   class="Modal-content">
+    <span  id="closeModal" class="Close"></span>
+   <img class="myBtn"  onclick=bgmp() src="EnterButton.png"> 
   </div>
 </div>
 </center><center>
 <button hidden id="myBtn"></button>
-<body>
+<body onclick=bgmp()>
 <div>
 </center>
-  <div id="Parallax"></div>
-  <audio id="musica" type="ogg" src="./BarkBenefactorMusic.ogg" loop="true" >
+  <div  id="Parallax"></div>
+  <audio id="musica" type="ogg" src="BarkBenefactorMusic.ogg" loop="true" >
  </audio> <center>
     <div id="Socials">
     <a href="https://discord.gg/rpABpt2Syz" id="discord" target="_blank"><image class="Icon" src="dsc.png"/></a>
     <a href="https://twitter.com/BarkBenefactor/" id="twitter" target="_blank"><image class="Icon" src="twt.png"/></a>
     <a href="https://opensea.io/" id="brokensea" target="_blank"><image class="Icon" src="brokensea.png"/></a>
+    <a href="javascript:" id="MusicToggle" target="_blank"><img id="Icon" src="mute.png" onclick = "changeColor()"/></a>
+    <script>
+      var image =  document.getElementById("imageOne");
+
+      function changeColor()
+      {
+          if (image.getAttribute('src') == "mute.png")
+          {
+              image.src = "play.png";
+          }
+          else
+          {
+              image.src = "mute.png";
+          }
+      }
+  </script>
     </div>
   </center>
 </div>
 <script>
   var bgm = document.getElementById("musica"); 
-function bgmp() { 
+  function bgmp() { 
   bgm.play(); 
 }
   //is-hidden
@@ -58,7 +73,7 @@ var container = document.getElementById('myContainer');
 // Get the open button
 var btnOpen = document.getElementById("closeModal");
 // Get the close button
-var btnClose = document.getElementById("myBtn");
+var btnClose = document.getElementById("myModal");
 // Open the modal
 btnOpen.onload = function() {
     modal.className = "Modal is-blurred";
@@ -79,7 +94,7 @@ btnClose.onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.className = "Modal is-hidden";
-        body.className = "body";
+        body.className = "Modal";
     }
 }
 </script>
